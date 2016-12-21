@@ -3,7 +3,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body class="bg">
 <table class="table1">
     <tr>
         <td class='block1'>Логин</td>

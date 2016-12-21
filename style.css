@@ -44,7 +44,7 @@
 }
 .main2 {
 	width: 500px; 
-	height: 600px;
+	height: 650px;
     background: #fc0; 
     padding: 5px; 
     position: relative; 
@@ -62,4 +62,25 @@
     width: 800px;
     margin: auto;
     text-align: left;
+}
+
+.bg {
+    background-image: url(background.png);
+}
+.button {
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 3px;
+    background: rgb(64,199,129);
+    box-shadow: 0 -3px rgb(53,167,110) inset;
+    transition: 0.2s;
+}
+.button:hover {
+    background: rgb(53, 167, 110);
+}
+.button:active {
+    background: rgb(33,147,90);
+    box-shadow: 0 3px rgb(33,147,90) inset;
 }

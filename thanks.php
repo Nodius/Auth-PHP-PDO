@@ -3,7 +3,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body class="bg">
 <?php
 //Подключение внешнего кода
 include "reg1.php";
