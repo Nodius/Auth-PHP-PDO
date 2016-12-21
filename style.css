@@ -52,4 +52,14 @@
     left: 700px; 
 }
 
+.table1 {
+    width: 800px;
+    margin: auto;
+    text-align: center;
+}
 
+.table2 {
+    width: 800px;
+    margin: auto;
+    text-align: left;
+}

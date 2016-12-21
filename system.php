@@ -29,6 +29,9 @@ else {
 		print '<form action="admin.php">
                <p align="center"><input type="submit" value="Панель администратора"></p>
                </form>';
+		print '<form action="index.html">
+               <p align="center"><input type="submit" value="Назад"></p>
+               </form>';
 	}
 }
 ?>

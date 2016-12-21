@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<table align="center">
+<table class="table1">
     <tr>
         <td class='block1'>Логин</td>
         <td class='block2'>ФИО</td>
@@ -16,12 +16,14 @@
 <?php
 include "dbconnect.php";
 
+$del1 = $_POST['del'];
+
 $adm = $pdo2 -> query("SELECT login,fio,email,password FROM users");
 $auth = $adm -> fetchAll();
 
 foreach ($auth as $v) {
     echo "
-    <table align='center'>
+    <table class='table2'>
   <tr>
     <td class='block1'>$v[0]</td>
     <td class='block2'>$v[1]</td>
@@ -30,6 +32,16 @@ foreach ($auth as $v) {
   </tr>
 </table>";
 }
+
+if(!empty('$del1')) {
+    $adm1 = $pdo2->query("DELETE FROM users WHERE login = '$del1'");
+}
 ?>
+
+<h3>Для удаления пользователя введите его логин(затем обновите страницу):</h3>
+<form action="admin.php" method="post">
+<input type="text" size="20" name="del">
+<input type="submit" value="Удалить">
+</form>
 </body>
 </html>
