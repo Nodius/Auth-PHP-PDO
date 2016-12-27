@@ -3,6 +3,7 @@ include "dbconnect.php";
 
 $log1=$_POST['login'];
 $pas1=$_POST['pas'];
+$hash=crypt('$pas1');
 
 if(empty($log1)) {
 		print "<h2>Не введен логин</h2>";
@@ -24,10 +25,16 @@ else {
 	if($pas1!==$rows1) {
 		print "<h2>Вы ввели неверный пароль</h2>";
 	}
+	/*if(hash_equals($hash,crypt($pass,$hash))) {
+		echo "<h2>Пароль неверен</h2>";
+	}*/
 	else {
-		print "<h1>Добро пожаловать,".$log1."</h1>";
+		print "<h1 align='center'>Добро пожаловать, ".$log1."</h1>";
 		print '<form action="admin.php">
                <p align="center"><input type="submit" value="Панель администратора"></p>
+               </form>';
+		print '<form action="profile.php" method="post">
+               <p align="center"><input type="submit" value="Профиль пользователя"></p>
                </form>';
 		print '<form action="index.html">
                <p align="center"><input type="submit" value="Назад"></p>

@@ -24,7 +24,7 @@ else {
 
     $auth2 = $pdo1->query("SELECT email FROM users WHERE email='$email'");
     $dot2 = $auth2->fetchColumn();
-
+    
     if ($dot1 == $log1) {
         if ($dot2 == $email) {
             echo "<h1>Такой логин или email уже существует</h1>";

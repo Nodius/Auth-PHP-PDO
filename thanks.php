@@ -5,12 +5,10 @@
 </head>
 <body class="bg">
 <?php
-//Подключение внешнего кода
 include "reg1.php";
-
 ?>
 <form action="index.html">
-<p align="center"><input type="submit" value="Назад"></p>
+<input type="submit" class="button" value="Назад">
 </form>
 </body>
 </html>

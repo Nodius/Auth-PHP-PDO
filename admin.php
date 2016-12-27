@@ -38,10 +38,10 @@ if(!empty('$del1')) {
 }
 ?>
 
-<h3>Для удаления пользователя введите его логин(затем обновите страницу):</h3>
+<h3 class="title1">Для удаления пользователя введите его логин (затем обновите страницу):</h3>
 <form action="admin.php" method="post">
-<input type="text" size="20" name="del">
-<input type="submit" value="Удалить">
+<p align="center"><input  type="text" size="20" name="del">
+<input  type="submit" value="Удалить"></p>
 </form>
 </body>
 </html>
