@@ -6,6 +6,7 @@
     border: solid 1px black;
     float: left;
 }
+
 .block2 {
 	width: 200px;
 	background: #ccc;
@@ -14,6 +15,7 @@
     border: solid 1px black;
     float: left;
 }
+
 .block3 {
 	width: 200px;
 	background: #ccc;
@@ -22,6 +24,7 @@
     border: solid 1px black;
     float: left;
 }
+
 .block4 {
 	width: 150px;
 	background: #ccc;
@@ -30,9 +33,18 @@
     border: solid 1px black;
     float: left;
 }
+
 .title1 {
 	text-align: center;
 }
+
+.title2 {
+    color: green;
+}
+.title3 {
+    color: red;
+}
+
 .main1 {
 	width: 300px; 
     background: #fc0; 
@@ -42,6 +54,7 @@
     top: 200px; 
     left: 800px; 
 }
+
 .main2 {
 	width: 500px; 
 	height: 650px;
@@ -50,6 +63,16 @@
     position: relative; 
     top: 200px; 
     left: 700px; 
+}
+
+.main3 {
+    width: 350px;
+    background: #fc0;
+    padding: 5px;
+    float: left;
+    position: relative;
+    top: 200px;
+    left: 800px;
 }
 
 .table1 {

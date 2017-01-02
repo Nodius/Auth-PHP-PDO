@@ -12,8 +12,8 @@
         <td class='block4'>Пароль</td>
     </tr>
 </table>
-
 <?php
+
 include "dbconnect.php";
 
 $del1 = $_POST['del'];
@@ -37,11 +37,13 @@ if(!empty('$del1')) {
     $adm1 = $pdo2->query("DELETE FROM users WHERE login = '$del1'");
 }
 ?>
-
 <h3 class="title1">Для удаления пользователя введите его логин (затем обновите страницу):</h3>
 <form action="admin.php" method="post">
 <p align="center"><input  type="text" size="20" name="del">
 <input  type="submit" value="Удалить"></p>
+</form>
+<form action="index.html">
+    <p align="center"><input  type="submit" value="Назад"></p>
 </form>
 </body>
 </html>
