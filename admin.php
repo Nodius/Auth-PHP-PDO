@@ -2,6 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Администратор</title>
 </head>
 <body class="bg">
 <table class="table1">

@@ -50,6 +50,7 @@ else {
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<title>Система</title>
 </head>
 <body class="bg">
 </body>
