@@ -62,11 +62,11 @@
 
 .main2 {
 	width: 500px; 
-	height: 650px;
+	height: 720px;
     background: #fc0; 
     padding: 5px; 
     position: relative; 
-    top: 200px; 
+    top: 100px;
     left: 700px; 
 }
 
@@ -95,6 +95,7 @@
 .bg {
     background-image: url(background.png);
 }
+
 .button {
     font-weight: 700;
     color: white;

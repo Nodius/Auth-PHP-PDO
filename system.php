@@ -28,9 +28,6 @@ else {
 	if($pas1!==$rows1) {
 		print "<h2>Вы ввели неверный пароль</h2>";
 	}
-	/*if(hash_equals($hash,crypt($pass,$hash))) {
-		echo "<h2>Пароль неверен</h2>";
-	}*/
 	else {
 		print "<h1 align='center' class='title2'>Добро пожаловать, ".$log1."</h1>";
 		print '<form action="admin.php">

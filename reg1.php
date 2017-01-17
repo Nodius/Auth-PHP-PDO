@@ -5,6 +5,7 @@ $log1 = $_POST['log1'];
 $pass = $_POST['pass'];
 $fio = $_POST['fio'];
 $email = $_POST['email'];
+$birth = $_POST['birthday'];
 
 if(empty($log1)) {
     print "<h2>Вы не заполнили поле Логин </h2>";
@@ -14,6 +15,9 @@ if(empty($log1)) {
             print "<h2>Вы не заполнили поле ФИО </h2>";
             if(empty($email)) {
                 print "<h2>Вы не заполнили поле Email </h2>";
+                if(empty($birth)) {
+                    print "<h2>Вы не заполнили поле Дата рождения </h2>";
+                }
             }
         }
     }
@@ -32,12 +36,13 @@ else {
     }
     if ($dot1 !== $log1) {
         if ($dot2 !== $email) {
-            $req = $pdo1->prepare("INSERT INTO users (login,password,fio,email) VALUES (:login,:password,:fio,:email)");
-            $req->bindParam(':login', $log1);
-            $req->bindParam(':password', $pass);
-            $req->bindParam(':fio', $fio);
-            $req->bindParam(':email', $email);
-            $req->execute();
+            $req = $pdo1->prepare("INSERT INTO users (login,password,fio,email,birthday) VALUES (:login,:password,:fio,:email,:birthday)");
+            $req -> bindParam(':login', $log1);
+            $req -> bindParam(':password', $pass);
+            $req -> bindParam(':fio', $fio);
+            $req -> bindParam(':email', $email);
+            $req -> bindParam(':birthday',$birth);
+            $req -> execute();
             print "<h2>Спасибо за регистрацию, " . $log1 . "</h2>";
         }
     }
