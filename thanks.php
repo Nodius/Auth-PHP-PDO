@@ -10,7 +10,7 @@
 include "reg1.php";
 ?>
 <form action="index.html">
-<input type="submit" class="button" value="Назад">
+<input type="submit" class="button1" value="Назад">
 </form>
 </body>
 </html>

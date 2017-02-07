@@ -26,10 +26,10 @@
 }
 
 .block4 {
-	width: 150px;
+	width: 520px;
 	background: #ccc;
     padding: 5px;
-    padding-right: 20px; 
+    padding-right: 20px;
     border: solid 1px black;
     float: left;
 }
@@ -81,15 +81,15 @@
 }
 
 .table1 {
-    width: 800px;
-    margin: auto;
+    width: 1800px;
     text-align: center;
+    margin-left: 20%;
 }
 
 .table2 {
-    width: 800px;
-    margin: auto;
+    width: 1800px;
     text-align: left;
+    margin-left: 20%;
 }
 
 .bg {
@@ -110,6 +110,25 @@
     background: rgb(53, 167, 110);
 }
 .button:active {
+    background: rgb(33,147,90);
+    box-shadow: 0 3px rgb(33,147,90) inset;
+}
+
+.button1 {
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 3px;
+    background: rgb(64,199,129);
+    box-shadow: 0 -3px rgb(53,167,110) inset;
+    transition: 0.2s;
+    margin-left: 47%;
+}
+.button1:hover {
+    background: rgb(53, 167, 110);
+}
+.button1:active {
     background: rgb(33,147,90);
     box-shadow: 0 3px rgb(33,147,90) inset;
 }

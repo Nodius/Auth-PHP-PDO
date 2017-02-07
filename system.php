@@ -1,32 +1,39 @@
 <?php
 session_start();
 include "dbconnect.php";
-$log1=$_POST['login'];
-$pas1=$_POST['pas'];
-$hash=crypt('$pas1');
 
-$_SESSION['log']=$log1;
-$_SESSION['pas']=$pas1;
+$log1 = $_POST['login'];
+$pas1 = $_POST['pas'];
+$_SESSION['log'] = $log1;
+$_SESSION['pas'] = $pas1;
+$back = $_SERVER['HTTP_REFERER'];
 
 if(empty($log1)) {
-	print "<h2>Не введен логин</h2>";
+	echo "
+<html>
+  <head>
+   <meta http-equiv='Refresh' content='0; URL=".$_SERVER['HTTP_REFERER']."'>
+  </head>
+</html>";
 }
 if(empty($pas1)) {
-	print "<h2>Не введен пароль</h2>";
+	echo "
+<html>
+  <head>
+   <meta http-equiv='Refresh' content='0; URL=".$_SERVER['HTTP_REFERER']."'>
+  </head>
+</html>";
 }
 else {
-	$req=$pdo->query("SELECT login FROM users WHERE login='$log1'");
-	$rows=$req->fetchColumn();
+	$req = $pdo -> query("SELECT login,password FROM users WHERE login='$log1'");
+	$req -> execute();
+	$rows = $req -> fetch();
 
-	$req1=$pdo->query("SELECT password FROM users WHERE password='$pas1'");
-	$rows1=$req1->fetchColumn();
-
-	if($log1!==$rows) {
-		print "<h2>Вы ввели неверный логин </h2>";
-
+	if($log1 !== $rows[0]) {
+		print "<h2 align='center'>Вы ввели неверный логин </h2>";
 	}
-	if($pas1!==$rows1) {
-		print "<h2>Вы ввели неверный пароль</h2>";
+	if($pas1 !== $rows[1]) {
+		print "<h2 align='center'>Вы ввели неверный пароль</h2>";
 	}
 	else {
 		print "<h1 align='center' class='title2'>Добро пожаловать, ".$log1."</h1>";
