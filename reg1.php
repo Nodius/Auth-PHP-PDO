@@ -22,6 +22,18 @@ if(empty($log1)) {
         }
     }
 }
+if(!preg_match("/^[a-zA-Z0-9]+$/",$log1)) {
+    print "Логин может состоять только из букв латинского алфавита и цифр";
+}
+elseif(strlen($log1) < 3 or strlen($log1) > 30) {
+    print "Логин должен быть не меньше 3-х символов и не больше 30";
+}
+elseif(!preg_match("/^[a-zA-Z0-9]+$/",$pass)) {
+    print "Пароль может состоять только из букв латинского алфавита и цифр";
+}
+elseif(strlen($log1) < 3 or strlen($log1) > 30) {
+    print "Пароль должен быть не меньше 5 символов и не больше 20";
+}
 else {
     $auth1 = $pdo1 -> query("SELECT login FROM users WHERE login='$log1'");
     $dot1 = $auth1 -> fetchColumn();
@@ -34,7 +46,7 @@ else {
             /*$hash=password_hash('$pass',PASSWORD_DEFAULT);*/
             $req = $pdo1 -> prepare("INSERT INTO users (login,password,fio,email,birthday) VALUES (:login,:password,:fio,:email,:birthday)");
             $req -> bindParam(':login', $log1);
-            $req -> bindParam(':password', $hash);
+            $req -> bindParam(':password', $pass);
             $req -> bindParam(':fio', $fio);
             $req -> bindParam(':email', $email);
             $req -> bindParam(':birthday',$birth);
