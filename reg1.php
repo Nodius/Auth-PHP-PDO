@@ -52,11 +52,13 @@ else {
             $req -> bindParam(':birthday',$birth);
             $req -> execute();
             print "<h2 class='title1'>Спасибо за регистрацию, " . $log1 . "</h2>";
+			unset($log1,$pass,$fio,$email,$birth);
         }
     }
     else
     {
         print "<h1 align='center'>Такой логин или email уже существует</h1>";
+		unset($log1,$pass,$fio,$email,$birth);
     }
 }
 ?>
